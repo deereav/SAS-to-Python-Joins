@@ -1,0 +1,101 @@
+first_name,last_name,address,city,state,zip_code,customer_number,account_balance,last_payment
+John,Smith,123 Main St,Springfield,IL,62701,10001,497.75,20250715
+Sarah,Johnson,456 Oak Ave,Portland,OR,97201,10002,628.0,20250822
+Michael,Williams,789 Pine Rd,Austin,TX,73301,10003,936.0,20250901
+Emily,Brown,321 Elm St,Denver,CO,80201,10004,163.75,20250728
+David,Jones,654 Maple Dr,Seattle,WA,98101,10005,1065.8,20250810
+Jessica,Garcia,987 Cedar Ln,Miami,FL,33101,10006,1381.3999999999996,20250905
+Christopher,Miller,147 Birch Ct,Boston,MA,2101,10007,419.4499999999998,20250712
+Amanda,Davis,258 Spruce St,Phoenix,AZ,85001,10008,1235.55,20250830
+Matthew,Rodriguez,369 Willow Way,Chicago,IL,60601,10009,76.0,20250903
+Ashley,Wilson,741 Poplar Pl,Atlanta,GA,30301,10010,303.1,20250720
+James,Martinez,852 Dogwood Dr,Dallas,TX,75201,10011,1826.75,20250807
+Lisa,Anderson,963 Hickory Hl,San Diego,CA,92101,10012,1018.8,20250909
+Robert,Thomas,159 Walnut St,Nashville,TN,37201,10013,751.8,20250725
+Jennifer,Jackson,357 Chestnut Ave,Las Vegas,NV,89101,10014,1223.41,20250802
+William,White,468 Sycamore Rd,Orlando,FL,32801,10015,1027.75,20250906
+Michelle,Harris,579 Magnolia Ln,Kansas City,MO,64101,10016,226.55,20250714
+Kevin,Martin,681 Redwood Dr,Salt Lake City,UT,84101,10017,182.5001,20250829
+Stephanie,Thompson,792 Cypress St,Sacramento,CA,95814,10018,261.74999999999994,20250908
+Brian,Garcia,813 Juniper Ct,Albuquerque,NM,87101,10019,1126.8,20250718
+Nicole,Lee,924 Aspen Way,Columbus,OH,43201,10020,1231.7,20250804
+Daniel,Clark,135 Fir Pl,Charlotte,NC,28201,10021,294.05,20250902
+Rachel,Lewis,246 Hemlock Dr,Indianapolis,IN,46201,10022,1663.2999999999997,20250731
+Anthony,Walker,357 Larch St,Milwaukee,WI,53201,10023,1100.0,20250812
+Karen,Hall,468 Basswood Ave,Memphis,TN,38101,10024,352.35,20250907
+Steven,Allen,579 Cottonwood Rd,Louisville,KY,40201,10025,1842.0,20250716
+Laura,Young,681 Alder Ln,Baltimore,MD,21201,10026,497.7501,20250826
+Mark,Hernandez,792 Beech Ct,Detroit,MI,48201,10027,704.3003,20250904
+Kimberly,King,813 Mulberry Way,El Paso,TX,79901,10028,85.80001,20250723
+Paul,Wright,924 Pecan Pl,Washington,DC,20001,10029,1620.05,20250814
+Donna,Lopez,135 Hazel Dr,Boston,MA,2102,10030,582.0,20250901
+Ryan,Hill,246 Locust St,Seattle,WA,98102,10031,782.0501,20250719
+Sandra,Scott,357 Sweetgum Ave,Portland,OR,97202,10032,614.4,20250831
+Jason,Green,468 Tulip Rd,Denver,CO,80202,10033,2007.2502,20250908
+Maria,Adams,579 Rose Ln,Phoenix,AZ,85002,10034,306.9999999999999,20250727
+Joshua,Baker,681 Lily Ct,San Antonio,TX,78201,10035,2405.8,20250806
+Amy,Gonzalez,792 Daisy Way,San Diego,CA,92102,10036,482.25,20250903
+Justin,Nelson,813 Violet Pl,Los Angeles,CA,90001,10037,1497.401,20250711
+Melissa,Carter,924 Iris Dr,San Francisco,CA,94101,10038,899.9001,20250824
+Andrew,Mitchell,135 Pansy St,Oakland,CA,94601,10039,831.2503,20250905
+Heather,Perez,246 Orchid Ave,Fresno,CA,93701,10040,403.5,20250729
+Eric,Roberts,357 Carnation Rd,Long Beach,CA,90801,10041,1094.15,20250817
+Rebecca,Turner,468 Sunflower Ln,Riverside,CA,92501,10042,1186.75,20250909
+Gregory,Phillips,579 Daffodil Ct,Santa Ana,CA,92701,10043,294.0001,20250713
+Janet,Campbell,681 Tulip Way,Anaheim,CA,92801,10044,1708.9,20250828
+Patrick,Parker,792 Marigold Pl,Aurora,CO,80014,10045,885.4999999999997,20250902
+Carolyn,Evans,813 Geranium Dr,Tampa,FL,33601,10046,239.2499999999999,20250721
+Harold,Edwards,924 Begonia St,St. Petersburg,FL,33701,10047,1785.35,20250809
+Christine,Collins,135 Zinnia Ave,Jacksonville,FL,32201,10048,652.0005,20250906
+Sean,Stewart,246 Petunia Rd,Hialeah,FL,33010,10049,703.25,20250726
+Catherine,Sanchez,357 Snapdragon Ln,Tallahassee,FL,32301,10050,657.45,20250815
+Arthur,Morris,468 Jasmine Ct,Fort Lauderdale,FL,33301,10051,983.9999999999994,20250904
+Frances,Rogers,579 Gardenia Way,Cape Coral,FL,33904,10052,1087.25,20250717
+Benjamin,Reed,681 Azalea Pl,Pembroke Pines,FL,33024,10053,1193.1,20250823
+Jean,Cook,792 Camellia Dr,Hollywood,FL,33019,10054,171.00006,20250901
+Wayne,Bailey,813 Hibiscus St,Coral Springs,FL,33065,10055,1407.7505,20250724
+Gloria,Rivera,924 Bougainvillea Ave,Gainesville,FL,32601,10056,573.75,20250811
+Roy,Cooper,135 Magnolia Rd,Lakeland,FL,33801,10057,1621.3002,20250907
+Teresa,Richardson,246 Dogwood Ln,Palm Bay,FL,32901,10058,999.5,20250730
+Gerald,Cox,357 Redbud Ct,West Palm Beach,FL,33401,10059,484.25,20250818
+Julie,Howard,468 Mimosa Way,Clearwater,FL,33755,10060,1214.8002,20250908
+Louis,Ward,579 Catalpa Pl,Brandon,FL,33511,10061,285.25017,20250714
+Beverly,Torres,681 Serviceberry Dr,Plant City,FL,33563,10062,915.1005,20250827
+Philip,Peterson,792 Elderberry St,Sarasota,FL,34236,10063,859.75,20250903
+Diana,Gray,813 Mulberry Ave,Fort Myers,FL,33901,10064,225.4999999999999,20250722
+Bobby,Ramirez,924 Blackberry Rd,Naples,FL,34102,10065,435.75,20250805
+Virginia,James,135 Blueberry Ln,Ocala,FL,34471,10066,1895.85,20250909
+Donald,Watson,246 Strawberry Ct,Kissimmee,FL,34741,10067,8.150034,20250716
+Deborah,Brooks,357 Raspberry Way,Daytona Beach,FL,32114,10068,1049.2007,20250825
+Henry,Kelly,468 Cranberry Pl,Boca Raton,FL,33431,10069,49.75,20250902
+Ruth,Sanders,579 Gooseberry Dr,Delray Beach,FL,33444,10070,1282.6,20250728
+Jose,Price,681 Elderflower St,Boynton Beach,FL,33435,10071,692.3,20250813
+Marilyn,Bennett,792 Honeysuckle Ave,Coconut Creek,FL,33063,10072,362.05007,20250906
+Carl,Wood,813 Wisteria Rd,Margate,FL,33063,10073,1841.05,20250719
+Judith,Barnes,924 Forsythia Ln,Tamarac,FL,33321,10074,1185.2003,20250829
+Willie,Ross,135 Lilac Ct,Sunrise,FL,33322,10075,130.74999999999994,20250904
+Lori,Henderson,246 Lavender Way,Davie,FL,33314,10076,1639.1,20250723
+Lawrence,Coleman,357 Rosemary Pl,Plantation,FL,33324,10077,996.6005,20250808
+Evelyn,Jenkins,468 Thyme Dr,Cooper City,FL,33024,10078,432.5001,20250901
+Ralph,Perry,579 Sage St,Weston,FL,33326,10079,1084.85,20250731
+Sandra,Powell,681 Basil Ave,Miramar,FL,33025,10080,705.1499999999999,20250816
+Frank,Long,792 Oregano Rd,Pembroke Pines,FL,33028,10081,482.9,20250908
+Shirley,Patterson,813 Parsley Ln,Hallandale Beach,FL,33009,10082,1925.8504,20250712
+Jesse,Hughes,924 Cilantro Ct,Aventura,FL,33180,10083,447.85014,20250821
+Nancy,Flores,135 Dill Way,North Miami Beach,FL,33154,10084,400.2999999999999,20250905
+Johnny,Washington,246 Fennel Pl,Miami Beach,FL,33139,10085,1750.25,20250726
+Joyce,Butler,357 Chives Dr,Key Biscayne,FL,33149,10086,382.9499999999998,20250803
+Eugene,Simmons,468 Tarragon St,Coral Gables,FL,33134,10087,829.6504,20250907
+Janice,Foster,579 Cardamom Ave,Pinecrest,FL,33156,10088,507.59999999999997,20250715
+Samuel,Gonzales,681 Coriander Rd,Palmetto Bay,FL,33157,10089,1743.0,20250824
+Ann,Bryant,792 Cumin Ln,Homestead,FL,33030,10090,803.9499999999999,20250902
+Roger,Alexander,813 Paprika Ct,Florida City,FL,33034,10091,437.50006,20250718
+Katherine,Russell,924 Turmeric Way,Marathon,FL,33050,10092,1228.95,20250830
+Bruce,Griffin,135 Saffron Pl,Key Largo,FL,33037,10093,117.44999999999993,20250909
+Christina,Diaz,246 Nutmeg Dr,Islamorada,FL,33036,10094,913.3003,20250720
+Keith,Hayes,357 Cinnamon St,Tavernier,FL,33070,10095,964.3001,20250807
+Marie,Myers,468 Allspice Ave,Key West,FL,33040,10096,444.1499999999999,20250904
+Jack,Ford,579 Ginger Rd,Big Pine Key,FL,33043,10097,262.8999999999999,20250725
+Martha,Hamilton,681 Clove Ln,Summerland Key,FL,33042,10098,1682.45,20250812
+Albert,Graham,792 Vanilla Ct,Cudjoe Key,FL,33042,10099,703.55,20250906
+Rose,Sullivan,813 Mint Way,Little Torch Key,FL,33042,10100,2315.6004,20250729
