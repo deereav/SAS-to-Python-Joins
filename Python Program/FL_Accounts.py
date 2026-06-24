@@ -1,28 +1,31 @@
+"""Apply monthly payments to customer account balances.
+
+Left-joins payments to accounts so every customer is preserved.
+Updates account_balance and last_payment only for customers who paid this month.
+"""
+
+from pathlib import Path
 import pandas as pd
 
-# Import CSV files (equivalent to proc import)
-FL_Accounts = pd.read_csv("c:/users/daryl/FL_Accounts.csv")
-FL_Payments_9_2025 = pd.read_csv("c:/users/daryl/FL_Payments_9_2025.csv")
+DATA = Path(__file__).resolve().parent.parent / "data"
 
-# Sort by customer_number (equivalent to proc sort)
-FL_Accounts = FL_Accounts.sort_values('customer_number')
-FL_Payments_9_2025 = FL_Payments_9_2025.sort_values('customer_number')
+# Load inputs
+accounts = pd.read_csv(DATA / "FL_Accounts.csv")
+payments = pd.read_csv(DATA / "FL_Payments_9_2025.csv")
 
-# Left join the datasets (equivalent to proc sql)
-Accounts = FL_Accounts.merge(FL_Payments_9_2025, 
-                            on='customer_number', 
-                            how='left')
+# Left join keeps customers who didn't pay this month
+out = accounts.merge(payments, on="customer_number", how="left")
 
-# Data step operations
-FL_Accounts = Accounts.copy()
-FL_Accounts['last_payment'] = FL_Accounts['payment_date']
-FL_Accounts['account_balance'] = FL_Accounts['account_balance'] - FL_Accounts['payment_amount']
+# No payment -> NaN; treat as zero so the balance isn't wiped out
+out["payment_amount"] = out["payment_amount"].fillna(0)
+out["account_balance"] -= out["payment_amount"]
 
-# Drop columns (equivalent to drop statement)
-FL_Accounts = FL_Accounts.drop(columns=['payment_date', 'payment_amount'])
+# Update last_payment only when a new payment exists; otherwise keep the prior value
+out["last_payment"] = out["payment_date"].fillna(out["last_payment"])
 
-# Print the data (equivalent to proc print)
-print(FL_Accounts)
+# Drop the join-only columns
+out = out.drop(columns=["payment_amount", "payment_date"])
 
-# Export to CSV (equivalent to proc export)
-FL_Accounts.to_csv("c:/users/daryl/FL_Accounts.csv", index=False)
+# Write to a NEW file — never overwrite the input
+out.to_csv(DATA / "FL_Accounts_python_out.csv", index=False)
+print(out)
