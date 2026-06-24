@@ -1,35 +1,34 @@
-proc import datafile="/home/u39806166/FL_Accounts.csv"
-DBMS=csv
-OUT=FL_Accounts
-replace;
-proc sort data=FL_Accounts;
-by customer_number;
-run;
-proc import datafile="/home/u39806166/FL_Payments_9_2025.csv"
-DBMS=csv
-OUT=FL_Payments_9_2025
-replace;
-proc sort data=FL_Payments_9_2025;
-by customer_number;
-run;
-proc sql;
-create table Accounts as
-select *
-from FL_Accounts as a
-left join FL_Payments_9_2025 as b
-on a.customer_number = b.customer_number;
-quit;
-Data FL_Accounts;
-Set  Accounts;
-last_payment = payment_date;
-account_balance= account_balance - payment_amount;
-drop payment_date payment_amount;
-run;
+/* Apply monthly payments to customer account balances.
+   Left join + coalesce keeps no-payment customers from going to missing.
+   last_payment is updated only when a new payment exists. */
 
-proc print data=FL_Accounts;
-run;
-proc export data=FL_Accounts
-DBMS=csv
-OUTFILE="/home/u39806166/FL_Accounts.csv"
-replace;
-run;
+%let data_dir = ./data;
+
+proc import datafile="&data_dir/FL_Accounts.csv"        dbms=csv out=fl_accounts replace; run;
+proc import datafile="&data_dir/FL_Payments_9_2025.csv" dbms=csv out=fl_payments replace; run;
+
+proc sql;
+    create table fl_accounts_out as
+    select a.first_name,
+           a.last_name,
+           a.address,
+           a.city,
+           a.state,
+           a.zip_code,
+           a.customer_number,
+           a.account_balance - coalesce(b.payment_amount, 0)
+               as account_balance format=12.2,
+           coalesce(b.payment_date, a.last_payment)
+               as last_payment format=yymmdd10.
+    from fl_accounts as a
+    left join fl_payments as b
+      on a.customer_number = b.customer_number;
+quit;
+
+proc print data=fl_accounts_out; run;
+
+proc export data=fl_accounts_out
+    outfile="&data_dir/FL_Accounts_sas_out.csv" dbms=csv replace; run;
+/* The original version of this script had a subtle missing-value bug that destroyed balances for customers who didn't pay that month. 
+SAS and Python both reproduced the bug identically, so naive parity checking would have signed off on it. The fix — 
+coalesce in SAS, fillna in Python — is what makes the migration actually correct, not just matching. */
