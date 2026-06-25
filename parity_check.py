@@ -3,7 +3,7 @@
 from pathlib import Path
 import pandas as pd
 
-DATA = Path(__file__).resolve().parent.parent / "data"
+DATA = Path(__file__).resolve().parent / "data"
 
 def load(name):
     return (pd.read_csv(DATA / name)
